@@ -1,0 +1,22 @@
+obdb_id,name,brewery_type,street,address_2,address_3,city,state,county_province,postal_code,website_url,phone,country,longitude,latitude,tags
+5-rivers-brewing-llc-spanish-fort,5 Rivers Brewing LLC,planning,,,,Spanish Fort,Alabama,,36527-3161,http://5riversbrewing.com,2516897483,United States,-87.9152724,30.6749127,
+{
+  id: 12432,
+  obdb_id: "madtree-brewing-cincinnati",
+  name: "MadTree Brewing",
+  brewery_type: "regional",
+  street: "3301 Madison Rd",
+  address_2: null,
+  address_3: null,
+  city: "Cincinnati",
+  state: "Ohio",
+  county_province: null,
+  postal_code: "45209-1132",
+  country: "United States",
+  longitude: "-84.4239715",
+  latitude: "39.1563725",
+  phone: "5138368733",
+  website_url: "http://www.madtreebrewing.com",
+  updated_at: "2018-07-24T00:00:00.000Z",
+  created_at: "2018-07-24T00:00:00.000Z"
+}
