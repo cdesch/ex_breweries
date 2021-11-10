@@ -1,0 +1,97 @@
+<h1>Show Brewery</h1>
+
+<%= if @live_action in [:edit] do %>
+  <%= live_modal ExBreweryWeb.BreweryLive.FormComponent,
+    id: @brewery.id,
+    title: @page_title,
+    action: @live_action,
+    brewery: @brewery,
+    return_to: Routes.brewery_show_path(@socket, :show, @brewery) %>
+<% end %>
+
+<ul>
+
+  <li>
+    <strong>Obdb:</strong>
+    <%= @brewery.obdb_id %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @brewery.name %>
+  </li>
+
+  <li>
+    <strong>Brewery type:</strong>
+    <%= @brewery.brewery_type %>
+  </li>
+
+  <li>
+    <strong>Street:</strong>
+    <%= @brewery.street %>
+  </li>
+
+  <li>
+    <strong>Address 2:</strong>
+    <%= @brewery.address_2 %>
+  </li>
+
+  <li>
+    <strong>Address 3:</strong>
+    <%= @brewery.address_3 %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @brewery.city %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @brewery.state %>
+  </li>
+
+  <li>
+    <strong>County province:</strong>
+    <%= @brewery.county_province %>
+  </li>
+
+  <li>
+    <strong>Postal code:</strong>
+    <%= @brewery.postal_code %>
+  </li>
+
+  <li>
+    <strong>Website url:</strong>
+    <%= @brewery.website_url %>
+  </li>
+
+  <li>
+    <strong>Phone:</strong>
+    <%= @brewery.phone %>
+  </li>
+
+  <li>
+    <strong>Country:</strong>
+    <%= @brewery.country %>
+  </li>
+
+  <li>
+    <strong>Longitude:</strong>
+    <%= @brewery.longitude %>
+  </li>
+
+  <li>
+    <strong>Latitude:</strong>
+    <%= @brewery.latitude %>
+  </li>
+
+  <li>
+    <strong>Tags:</strong>
+    <%= @brewery.tags %>
+  </li>
+
+</ul>
+
+<span><%= live_patch "Edit", to: Routes.brewery_show_path(@socket, :edit, @brewery), class: "button" %></span> |
+<span><%= live_redirect "Back", to: Routes.brewery_index_path(@socket, :index) %></span>

@@ -18,6 +18,13 @@ defmodule ExBreweryWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    live "/breweries", BreweryLive.Index, :index
+    live "/breweries/new", BreweryLive.Index, :new
+    live "/breweries/:id/edit", BreweryLive.Index, :edit
+
+    live "/breweries/:id", BreweryLive.Show, :show
+    live "/breweries/:id/show/edit", BreweryLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.

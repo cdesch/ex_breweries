@@ -1,0 +1,65 @@
+<h1>Listing Breweries</h1>
+
+<%= if @live_action in [:new, :edit] do %>
+  <%= live_modal ExBreweryWeb.BreweryLive.FormComponent,
+    id: @brewery.id || :new,
+    title: @page_title,
+    action: @live_action,
+    brewery: @brewery,
+    return_to: Routes.brewery_index_path(@socket, :index) %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Obdb</th>
+      <th>Name</th>
+      <th>Brewery type</th>
+      <th>Street</th>
+      <th>Address 2</th>
+      <th>Address 3</th>
+      <th>City</th>
+      <th>State</th>
+      <th>County province</th>
+      <th>Postal code</th>
+      <th>Website url</th>
+      <th>Phone</th>
+      <th>Country</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Tags</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="breweries">
+    <%= for brewery <- @breweries do %>
+      <tr id={"brewery-#{brewery.id}"}>
+        <td><%= brewery.obdb_id %></td>
+        <td><%= brewery.name %></td>
+        <td><%= brewery.brewery_type %></td>
+        <td><%= brewery.street %></td>
+        <td><%= brewery.address_2 %></td>
+        <td><%= brewery.address_3 %></td>
+        <td><%= brewery.city %></td>
+        <td><%= brewery.state %></td>
+        <td><%= brewery.county_province %></td>
+        <td><%= brewery.postal_code %></td>
+        <td><%= brewery.website_url %></td>
+        <td><%= brewery.phone %></td>
+        <td><%= brewery.country %></td>
+        <td><%= brewery.longitude %></td>
+        <td><%= brewery.latitude %></td>
+        <td><%= brewery.tags %></td>
+
+        <td>
+          <span><%= live_redirect "Show", to: Routes.brewery_show_path(@socket, :show, brewery) %></span>
+          <span><%= live_patch "Edit", to: Routes.brewery_index_path(@socket, :edit, brewery) %></span>
+          <span><%= link "Delete", to: "#", phx_click: "delete", phx_value_id: brewery.id, data: [confirm: "Are you sure?"] %></span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<span><%= live_patch "New Brewery", to: Routes.brewery_index_path(@socket, :new) %></span>

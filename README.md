@@ -21,6 +21,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
     mix phx.gen.live Barrel Brewery breweries obdb_id:string:unique name:string brewery_type:string street:string address_2:string address_3:string city:string state:string county_province:string postal_code:string website_url:string phone:string country:string longitude:float latitude:float tags:string 
 
-    mix phx.gen.json Animals Canine canines breed:string weight:string average_weight_pounds:float average_weight_kg:float size_category:string --web Api --no-schema
+    mix phx.gen.json Barrel Brewery breweries obdb_id:string:unique name:string brewery_type:string street:string address_2:string address_3:string city:string state:string county_province:string postal_code:string website_url:string phone:string country:string longitude:float latitude:float tags:string --web Api --no-schema
 
 obdb_id:string:unique name:string brewery_type:string street:string address_2:string address_3:string city:string state:string county_province:string postal_code:string website_url:string phone:string country:string longitude:float latitude:float tags:string 
+
+name, street, brewery_type, city, state (or county_province), postal_code, and country

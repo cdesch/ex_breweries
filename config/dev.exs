@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :ex_brewery, ExBrewery.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "cj1",
+  # password: "postgres",
   database: "ex_brewery_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
