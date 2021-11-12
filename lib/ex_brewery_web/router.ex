@@ -12,6 +12,7 @@ defmodule ExBreweryWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
   end
 
   scope "/", ExBreweryWeb do
@@ -27,9 +28,16 @@ defmodule ExBreweryWeb.Router do
     live "/breweries/:id/show/edit", BreweryLive.Show, :edit
   end
 
+  scope "/api", ExBreweryWeb.Api, as: :api do
+    pipe_through :api
+    resources "/breweries", BreweryController
+  end
+
+
   # Other scopes may use custom stacks.
   # scope "/api", ExBreweryWeb do
   #   pipe_through :api
+  #   resources "/breweries", BreweryController
   # end
 
   # Enables LiveDashboard only for development

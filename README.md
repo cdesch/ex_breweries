@@ -1,5 +1,10 @@
 # ExBrewery
 
+
+## Data Source
+
+    https://github.com/openbrewerydb/openbrewerydb
+    
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

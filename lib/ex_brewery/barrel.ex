@@ -101,4 +101,5 @@ defmodule ExBrewery.Barrel do
   def change_brewery(%Brewery{} = brewery, attrs \\ %{}) do
     Brewery.changeset(brewery, attrs)
   end
+
 end
