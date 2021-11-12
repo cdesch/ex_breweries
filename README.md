@@ -26,6 +26,12 @@ Run Static Code Analysis
 
     mix credo
 
+## Database Operations
+
+Reset Database
+
+    mix ecto.reset
+
 
 ## Generators
 
