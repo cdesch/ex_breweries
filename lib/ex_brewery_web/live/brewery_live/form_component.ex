@@ -1,4 +1,7 @@
 defmodule ExBreweryWeb.BreweryLive.FormComponent do
+  @moduledoc """
+  Brewery LiveView Form
+  """
   use ExBreweryWeb, :live_component
 
   alias ExBrewery.Barrel

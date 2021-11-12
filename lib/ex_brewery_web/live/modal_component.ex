@@ -1,4 +1,7 @@
 defmodule ExBreweryWeb.ModalComponent do
+  @moduledoc """
+  Brewery LiveView Modal Component
+  """
   use ExBreweryWeb, :live_component
 
   @impl true

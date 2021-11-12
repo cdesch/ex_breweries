@@ -1,4 +1,7 @@
 defmodule ExBrewery.Barrel.Brewery do
+  @moduledoc """
+  Brewery Barrel Schema
+  """
   use Ecto.Schema
   import Ecto.Changeset
 

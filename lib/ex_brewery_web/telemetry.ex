@@ -1,4 +1,7 @@
 defmodule ExBreweryWeb.Telemetry do
+  @moduledoc """
+  BrewerWeb Telemetry
+  """
   use Supervisor
   import Telemetry.Metrics
 

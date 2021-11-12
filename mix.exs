@@ -50,6 +50,7 @@ defmodule ExBrewery.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:csv, "~> 2.4"},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
     ]
   end
 

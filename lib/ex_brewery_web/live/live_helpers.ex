@@ -1,4 +1,7 @@
 defmodule ExBreweryWeb.LiveHelpers do
+  @moduledoc """
+  Brewery LiveView Helpers
+  """
   import Phoenix.LiveView.Helpers
 
   @doc """

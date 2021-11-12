@@ -1,4 +1,7 @@
 defmodule ExBreweryWeb.BreweryLive.Index do
+  @moduledoc """
+  Brewery LiveView Index
+  """
   use ExBreweryWeb, :live_view
 
   alias ExBrewery.Barrel
