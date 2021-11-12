@@ -6,6 +6,16 @@ defmodule ExBreweryWeb.Api.BreweryView do
     %{data: render_many(breweries, BreweryView, "brewery.json")}
   end
 
+  def render("index_paged.json", %{breweries: breweries}) do
+    %{
+      data: render_many(breweries, BreweryView, "brewery.json"),
+      page_number: breweries.page_number,
+      page_size: breweries.page_size,
+      total_entries: breweries.total_entries,
+      total_pages: breweries.total_pages,
+    }
+  end
+
   def render("show.json", %{brewery: brewery}) do
     %{data: render_one(brewery, BreweryView, "brewery.json")}
   end

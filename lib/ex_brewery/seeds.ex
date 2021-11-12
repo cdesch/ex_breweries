@@ -11,6 +11,7 @@ defmodule ExBrewery.Seeds do
     Enum.reduce(keys, row, fn key, acc -> convert_to_float(acc, key) end)
   end
 
+  @spec convert_to_float(map, any) :: map
   @doc """
   Convert the given field to float value for the Map
   """

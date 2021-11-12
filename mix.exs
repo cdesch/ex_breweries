@@ -51,6 +51,7 @@ defmodule ExBrewery.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:csv, "~> 2.4"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:scrivener_ecto, "~> 2.0"},
     ]
   end
 

@@ -6,9 +6,11 @@ defmodule ExBreweryWeb.Api.BreweryController do
 
   action_fallback ExBreweryWeb.FallbackController
 
-  def index(conn, _params) do
-    breweries = Barrel.list_breweries()
-    render(conn, "index.json", breweries: breweries)
+  # http://localhost:4000/api/breweries?page=2
+  # http://localhost:4000/api/breweries?page=2&page_size=5
+  def index(conn, params) do
+    breweries = Barrel.list_breweries_page(params)
+    render(conn, "index_paged.json", breweries: breweries)
   end
 
   def create(conn, %{"brewery" => brewery_params}) do
