@@ -10,6 +10,7 @@ import Config
 config :ex_brewery,
   ecto_repos: [ExBrewery.Repo]
 
+
 # Configures the endpoint
 config :ex_brewery, ExBreweryWeb.Endpoint,
   url: [host: "localhost"],
@@ -46,6 +47,10 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+# Configure Default Page Size
+config :ex_brewery,
+  page_size: 50
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

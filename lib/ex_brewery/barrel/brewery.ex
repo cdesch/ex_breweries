@@ -35,7 +35,6 @@ defmodule ExBrewery.Barrel.Brewery do
     |> unique_constraint(:obdb_id)
   end
 
-
   def validate_required_inclusion(changeset, fields,  options \\ []) do
     if Enum.any?(fields, fn(field) -> get_field(changeset, field) end),
       do: changeset,

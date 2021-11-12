@@ -72,3 +72,7 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# Configure Page Size
+config :ex_brewery,
+  page_size: 5
