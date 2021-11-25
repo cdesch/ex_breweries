@@ -32,7 +32,6 @@ Reset Database
 
     mix ecto.reset
 
-
 ## Generators
 
     mix phx.gen.live Barrel Brewery breweries obdb_id:string:unique name:string brewery_type:string street:string address_2:string address_3:string city:string state:string county_province:string postal_code:string website_url:string phone:string country:string longitude:float latitude:float tags:string 
