@@ -21,16 +21,16 @@ defmodule ExBrewery.Barrel do
     Repo.all(Brewery)
   end
 
-    @doc """
+  @doc """
   Returns the list of breweries.
 
   ## Examples
 
-      iex> list_breweries()
+      iex> list_breweries_page()
       [%Brewery{}, ...]
 
   """
-  def list_breweries_page(params) do
+  def list_breweries_page(params \\ %{}) do
     Repo.paginate(Brewery, params)
   end
 

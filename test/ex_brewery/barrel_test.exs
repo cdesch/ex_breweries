@@ -15,6 +15,12 @@ defmodule ExBrewery.BarrelTest do
       assert Barrel.list_breweries() == [brewery]
     end
 
+    test "list_breweries_page/0 returns all breweries" do
+      brewery = brewery_fixture()
+      page = Barrel.list_breweries_page()
+      assert page.entries == [brewery]
+    end
+
     test "get_brewery!/1 returns the brewery with given id" do
       brewery = brewery_fixture()
       assert Barrel.get_brewery!(brewery.id) == brewery

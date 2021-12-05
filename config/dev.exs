@@ -1,13 +1,24 @@
 import Config
 
 # Configure your database
+# config :ex_brewery, ExBrewery.Repo,
+#   username: "cj1",
+#   # password: "postgres",
+#   database: "ex_brewery_dev",
+#   hostname: "localhost",
+#   show_sensitive_data_on_connection_error: true,
+#   pool_size: 10
+
+# CockRoachDB Config
 config :ex_brewery, ExBrewery.Repo,
-  username: "cj1",
+  username: "root",
   # password: "postgres",
   database: "ex_brewery_dev",
   hostname: "localhost",
+  port: 26257,
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 10,
+  migration_lock: nil
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
